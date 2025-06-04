@@ -172,7 +172,7 @@ Maze mazenew(u2 w,u2 h) {
 	return maze;
 }
 
-u1 mazeget(Maze m,u1 x,u1 y) {
+u1 mazeget(Maze m,u2 x,u2 y) {
 	if(maze) return maze[PMA(x,y)];
 	return 0;
 }
