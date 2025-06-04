@@ -184,46 +184,6 @@ void mazedel(Maze* m) {
 	}
 }
 	
-//prueba
-
-#include <time.h>
-#include <stdio.h>
-
-#define pf printf("\033[7m \033[0m")
-#define pe printf(" ")
-#define pl puts("")
-#define pair(A) (((A)%2)==0)
-
-void mazeprint(Maze maze,u2 w,u2 h) {
-	for(u4 j=0;j<2*h+1;j++) {
-		for(u4 i=0;i<2*w+1;i++) {
-			if(j==0 || i==0) pf;
-			else {
-				u2 x=(i-1)/2;
-				u2 y=(j-1)/2;
-				u2 p=PMA(x,y);
-				u1 s=maze[p];
-				u1 pi=pair(i);
-				u1 pj=pair(j);
-				if(!pi && !pj) pe;
-				else if(pi && !pj && (s & EAST)) pe;
-				else if(!pi && pj && (s & SOUTH)) pe;
-				else pf;
-			}
-		}
-		pl;
-	}
-}
-
-int main() {
-	srand(time(NULL));
-	u2 w=100;
-	u2 h=100;
-	Maze m=mazenew(w,h);
-	mazeprint(m,w,h);
-	mazedel(&m);
-}
-
 
 		
 
