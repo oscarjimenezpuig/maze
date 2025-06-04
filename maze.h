@@ -24,6 +24,6 @@ typedef u1* Maze;
 
 Maze mazenew(u2 w,u2 h);
 
-u1 mazeget(Maze maze,u1 x,u1 y);
+u1 mazeget(Maze maze,u2 x,u2 y);
 
 void mazedel(Maze* maze);
